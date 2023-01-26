@@ -91,3 +91,13 @@ input[type="color"]::-moz-color-swatch{
 .active{
     background-color: #e0e9ff;
 }
+#container-count{
+    display: flex;
+    width: 98%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 5px 0 5px;
+}
+.counter{
+    color: #757575;
+}

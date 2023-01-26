@@ -8,6 +8,17 @@ let alignButtons = document.querySelectorAll(".align");
 let spacingButtons = document.querySelectorAll(".spacing");
 let formatButtons = document.querySelectorAll(".format");
 let scriptButtons = document.querySelectorAll(".script");
+let totalCharacters = document.getElementById("count-characters")
+let totalParagraphs = document.getElementById("count-paragraphs")
+
+writingArea.addEventListener("input", ()=>{
+    let text = writingArea.innerText.trim()
+    let countChar = text.length
+    let countP = writingArea.childElementCount
+    totalCharacters.textContent = `Ch: ${countChar}`
+    totalParagraphs.textContent = `P: ${countP}`
+    console.log(countP);
+})
 
 let fontList = [
     "Arial",
@@ -97,3 +108,4 @@ const highlighterRemover = (className)=>{
 }
 
 window.onload = initializer()
+
